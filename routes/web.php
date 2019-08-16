@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PhotoController@index')->name('home');
+
+Route::get('/galeria', 'PhotoController@galeria')->name('galeria');
+
+Route::post('/', 'PhotoController@guardar')->name('fotos.guardar');
